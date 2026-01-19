@@ -1,0 +1,29 @@
+{"ts": "2026-01-19T09:49:15.598236+00:00", "host": "192.168.1.1", "name": "Router", "from": "DEGRADED", "to": "DOWN"}
+{"ts": "2026-01-19T09:50:45.618353+00:00", "host": "8.8.8.8", "name": "Google DNS", "from": "UP", "to": "DEGRADED"}
+{"ts": "2026-01-19T09:50:55.460340+00:00", "host": "8.8.8.8", "name": "Google DNS", "from": "DEGRADED", "to": "UP"}
+{"ts": "2026-01-19T09:59:47.108793+00:00", "host": "1.1.1.1", "name": "Cloudflare DNS", "from": "UP", "to": "DEGRADED"}
+{"ts": "2026-01-19T09:59:53.289732+00:00", "host": "8.8.8.8", "name": "Google DNS", "from": "UP", "to": "DEGRADED"}
+{"ts": "2026-01-19T09:59:53.289732+00:00", "host": "1.1.1.1", "name": "Cloudflare DNS", "from": "DEGRADED", "to": "UP"}
+{"ts": "2026-01-19T10:00:07.124793+00:00", "host": "8.8.8.8", "name": "Google DNS", "from": "DEGRADED", "to": "UP"}
+{"ts": "2026-01-19T10:01:08.612335+00:00", "host": "8.8.8.8", "name": "Google DNS", "from": "UP", "to": "DEGRADED"}
+{"ts": "2026-01-19T10:01:15.250437+00:00", "host": "8.8.8.8", "name": "Google DNS", "from": "DEGRADED", "to": "UP"}
+{"ts": "2026-01-19T10:10:33.107667+00:00", "host": "8.8.8.8", "name": "Google DNS", "from": "UP", "to": "DEGRADED"}
+{"ts": "2026-01-19T10:10:41.327748+00:00", "host": "8.8.8.8", "name": "Google DNS", "from": "DEGRADED", "to": "UP"}
+{"ts": "2026-01-19T10:11:05.111110+00:00", "host": "1.1.1.1", "name": "Cloudflare DNS", "from": "UP", "to": "DEGRADED"}
+{"ts": "2026-01-19T10:11:14.806147+00:00", "host": "1.1.1.1", "name": "Cloudflare DNS", "from": "DEGRADED", "to": "UP"}
+{"ts": "2026-01-19T10:22:32.614951+00:00", "host": "1.1.1.1", "name": "Cloudflare DNS", "from": "UP", "to": "DEGRADED"}
+{"ts": "2026-01-19T10:22:42.063748+00:00", "host": "1.1.1.1", "name": "Cloudflare DNS", "from": "DEGRADED", "to": "UP"}
+{"ts": "2026-01-19T10:22:48.109898+00:00", "host": "8.8.8.8", "name": "Google DNS", "from": "UP", "to": "DEGRADED"}
+{"ts": "2026-01-19T10:22:54.252204+00:00", "host": "8.8.8.8", "name": "Google DNS", "from": "DEGRADED", "to": "UP"}
+{"ts": "2026-01-19T10:29:57.628665+00:00", "host": "8.8.8.8", "name": "Google DNS", "from": "UP", "to": "DEGRADED"}
+{"ts": "2026-01-19T10:30:03.734484+00:00", "host": "8.8.8.8", "name": "Google DNS", "from": "DEGRADED", "to": "UP"}
+{"ts": "2026-01-19T10:32:27+00:00", "name": "Router", "host": "192.168.1.1", "from": "DEGRADED", "to": "DOWN"}
+{"ts": "2026-01-19T10:32:27+00:00", "name": "Gateway", "host": "192.168.1.254", "from": "DEGRADED", "to": "DOWN"}
+{"ts": "2026-01-19T10:32:27+00:00", "name": "Switch 1", "host": "192.168.1.2", "from": "DEGRADED", "to": "DOWN"}
+{"ts": "2026-01-19T10:32:27+00:00", "name": "NAS", "host": "192.168.1.50", "from": "DEGRADED", "to": "DOWN"}
+{"ts": "2026-01-19T10:32:27+00:00", "name": "Web Server", "host": "192.168.1.100", "from": "DEGRADED", "to": "DOWN"}
+{"ts": "2026-01-19T10:33:36+00:00", "name": "Router", "host": "0.0.0.0", "from": "DEGRADED", "to": "DOWN"}
+{"ts": "2026-01-19T10:36:34+00:00", "name": "Cloudflare DNS", "host": "1.1.1.1", "from": "UP", "to": "DEGRADED"}
+{"ts": "2026-01-19T10:36:44+00:00", "name": "Cloudflare DNS", "host": "1.1.1.1", "from": "DEGRADED", "to": "UP"}
+{"ts": "2026-01-19T10:40:16+00:00", "name": "Cloudflare DNS", "host": "1.1.1.1", "from": "UP", "to": "DEGRADED"}
+{"ts": "2026-01-19T10:40:26+00:00", "name": "Cloudflare DNS", "host": "1.1.1.1", "from": "DEGRADED", "to": "UP"}

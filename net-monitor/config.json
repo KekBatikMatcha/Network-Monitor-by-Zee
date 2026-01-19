@@ -1,0 +1,28 @@
+{
+  "interval_seconds": 5,
+  "timeout_ms": 1200,
+  "degraded_latency_ms": 150,
+  "down_after_failures": 2,
+  "targets": [
+    { "name": "Router", "host": "192.168.1.1" },
+    { "name": "Google DNS", "host": "8.8.8.8" },
+    { "name": "Cloudflare DNS", "host": "1.1.1.1" },
+
+    { "name": "Gateway", "host": "192.168.1.254" },
+    { "name": "Switch 1", "host": "192.168.1.2" },
+    { "name": "NAS", "host": "192.168.1.50" },
+    { "name": "Web Server", "host": "192.168.1.100" }
+  ]
+,
+  "telegram": {
+  "enabled": false,
+  "bot_token": "PUT_YOUR_BOT_TOKEN_HERE",
+  "chat_id": "PUT_YOUR_CHAT_ID_HERE",
+  "cooldown_seconds": 60
+}
+}
+
+
+
+
+

@@ -1,0 +1,50 @@
+{
+  "192.168.1.1": {
+    "status": "DOWN",
+    "failures": 187,
+    "last_seen": null,
+    "last_alert_ts": 0.0
+  },
+  "8.8.8.8": {
+    "status": "UP",
+    "failures": 0,
+    "last_seen": "2026-01-19T11:04:08+00:00",
+    "last_alert_ts": 0.0
+  },
+  "1.1.1.1": {
+    "status": "UP",
+    "failures": 0,
+    "last_seen": "2026-01-19T11:04:08+00:00",
+    "last_alert_ts": 0.0
+  },
+  "192.168.1.254": {
+    "status": "DOWN",
+    "failures": 191,
+    "last_seen": null,
+    "last_alert_ts": 0.0
+  },
+  "192.168.1.2": {
+    "status": "DOWN",
+    "failures": 191,
+    "last_seen": null,
+    "last_alert_ts": 0.0
+  },
+  "192.168.1.50": {
+    "status": "DOWN",
+    "failures": 191,
+    "last_seen": null,
+    "last_alert_ts": 0.0
+  },
+  "192.168.1.100": {
+    "status": "DOWN",
+    "failures": 191,
+    "last_seen": null,
+    "last_alert_ts": 0.0
+  },
+  "0.0.0.0": {
+    "status": "DOWN",
+    "failures": 4,
+    "last_seen": null,
+    "last_alert_ts": 0.0
+  }
+}

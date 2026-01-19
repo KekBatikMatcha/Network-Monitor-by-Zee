@@ -1,0 +1,142 @@
+Z • Net Monitor Dashboard
+========================
+
+
+Key Features
+------------
+- Manual target monitoring (explicit allow-list)
+- Live status: UP / DEGRADED / DOWN
+- Latency measurement (ms) + failure counters
+- Snapshot JSON for dashboard + history log
+- Recent alerts panel (status-change events)
+- Search + sort + quick refresh UI
+- Designed for local use (XAMPP/Apache + PHP) and learning labs
+
+Tech Stack
+----------
+- Python (monitor agent)
+- PHP (API layer: reads JSON files)
+- HTML + CSS (dashboard UI)
+- JavaScript (fetch + render)
+- JSON / JSONL (status snapshots + logs)
+
+Typical Folder Structure
+------------------------
+net-monitor/
+  monitor.py
+  config.json                 (targets + intervals)  [DO NOT COMMIT REAL SECRETS]
+  config.example.json         (safe sample to commit)
+  data/
+    status.json               (latest snapshot)
+    history.jsonl             (append-only log)
+    alerts.jsonl              (status-change events)
+    state.json                (internal runtime state)
+  web/ or htdocs/net-monitor/
+    dashboard.php (or index.php)
+    api.php / web.api.php
+    assets/
+      style.css
+      app.js
+
+Step-by-Step Implementation (Windows + XAMPP)
+---------------------------------------------
+1) Create the project folder
+   Example:
+   C:\xampp\htdocs\net-monitor\
+
+2) Put the dashboard files into XAMPP
+   - dashboard.php (or index.php):
+     C:\xampp\htdocs\net-monitor\
+   - assets:
+     C:\xampp\htdocs\net-monitor\assets\
+       - style.css
+       - app.js
+
+3) Create the data folder
+   Create:
+   C:\xampp\htdocs\net-monitor\data\
+   This is where monitor.py writes output files.
+
+4) Create config.json (manual targets)
+   Example config.json:
+   {
+     "interval_seconds": 5,
+     "timeout_ms": 1200,
+     "degraded_latency_ms": 150,
+     "down_after_failures": 2,
+     "targets": [
+       { "name": "Router", "host": "192.168.1.1" },
+       { "name": "Google DNS", "host": "8.8.8.8" },
+       { "name": "Cloudflare DNS", "host": "1.1.1.1" }
+     ]
+   }
+
+5) Add a safe .gitignore (recommended)
+   Create .gitignore:
+   /data/
+   config.json
+
+   Then create config.example.json (safe placeholder) to commit:
+   - same keys, but use sample IPs and no secrets
+
+6) Run the monitor agent (IMPORTANT: correct command)
+   - Open CMD/PowerShell in the project folder:
+     cd C:\xampp\htdocs\net-monitor
+   - Run:
+     python monitor.py
+
+   If you see:
+     File "<stdin>", line 1
+       python monitor.py
+   You typed it inside the Python shell (>>>).
+   Fix: type exit() then run python monitor.py in CMD/PowerShell.
+
+7) Confirm files are being written
+   - Check:
+     C:\xampp\htdocs\net-monitor\data\status.json
+   It should update every interval_seconds.
+
+8) Start Apache (XAMPP)
+   - Open XAMPP Control Panel
+   - Start Apache
+
+9) Open the dashboard in browser
+   Visit:
+   http://localhost/net-monitor/dashboard.php
+
+10) Ensure your PHP API reads the same status.json your Python writes
+    - Your api.php/web.api.php should point to:
+      C:\xampp\htdocs\net-monitor\data\status.json
+
+11) Connect dashboard JS to the API
+    - In assets/app.js, ensure fetch URL matches:
+      fetch("api.php") or fetch("web.api.php")
+
+12) Fix the most common issue: assets/app.js 404
+    - Confirm dashboard.php includes:
+      <script src="assets/app.js"></script>
+    - Confirm the file exists at:
+      C:\xampp\htdocs\net-monitor\assets\app.js
+    - Misspellings cause 404 and the UI stays “Loading…”
+
+Troubleshooting
+---------------
+- Dashboard stuck on “Loading…”
+  - Open DevTools > Console:
+    - 404: wrong script/css path
+    - API error: PHP endpoint path/permissions issue
+- status.json updates but dashboard does not
+  - JS fetch URL wrong, or PHP is reading the wrong file path
+- Some devices show DOWN even if alive
+  - ICMP ping can be blocked by routers/switches/firewalls
+  - Validate monitoring using 8.8.8.8 and 1.1.1.1 first
+  - Later upgrade: add TCP/HTTP checks for ICMP-blocked devices
+
+Security / Ethics Notes (Put in README)
+---------------------------------------
+- Use only on authorized networks.
+- Targets are manually defined (allow-list) to prevent accidental scanning.
+- Never commit tokens/secrets. Use config.example.json and ignore config.json.
+
+
+© Zee
